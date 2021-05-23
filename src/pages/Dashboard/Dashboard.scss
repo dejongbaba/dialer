@@ -1,0 +1,55 @@
+@import "../../styles/App";
+
+.contact-list{
+  height: 100vh;
+  overflow: auto;
+
+  &-item{
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    transition: all .3s ease-in-out;
+
+    &-image{
+      width: 50px;
+      height: 50px;
+      border-radius: .3rem;
+    }
+    &-info{
+      color: color(gray);
+    }
+
+    &:hover{
+      background-color: color(white);
+    }
+  }
+}
+
+.contact-card{
+
+  &-profile{
+    display: flex;
+    align-items: center;
+
+    &-header{
+      font-size: $mediumSize;
+    }
+
+    img{
+      @extend .contact-card-image
+    }
+    &-text{
+      p:first-of-type{
+        color: color(gray);
+      }
+    }
+
+  }
+
+}
+
+.contact-card-history{
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4,1fr);
+}

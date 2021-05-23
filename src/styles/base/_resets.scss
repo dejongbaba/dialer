@@ -1,0 +1,33 @@
+* {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+body,
+html {
+  box-sizing: border-box;
+  font-family:  "Poppins","Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+*:focus {
+  outline: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
