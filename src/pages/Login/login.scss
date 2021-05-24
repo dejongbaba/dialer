@@ -1,0 +1,15 @@
+@import '../../styles/App';
+.login{
+
+
+  &-form{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    width: 50%;
+    height: 500px;
+    border-radius: 2rem;
+    margin: 10rem auto;
+  }
+
+}
