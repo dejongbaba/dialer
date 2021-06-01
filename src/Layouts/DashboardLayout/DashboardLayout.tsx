@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 import "./dashboardlayout.scss";
-import phone from "../../assets/svg/phone.svg";
+// import phone from "../../assets/svg/phone.svg";
 import user from "../../assets/svg/people.svg";
 import setting from "../../assets/svg/settings.svg";
 import profile from "../../assets/png/profile-image.jpeg";
