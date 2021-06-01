@@ -10,7 +10,7 @@
     &-item{
       margin-bottom: 5rem;
       &-icon{
-        filter: invert(1);
+        filter: invert(1) brightness(1.5);
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -36,7 +36,7 @@
         margin-right: 2rem;
         img{
           width: 30px;
-          filter: invert(21%) sepia(95%) saturate(1154%) hue-rotate(203deg) brightness(94%) contrast(89%);
+          //filter: invert(21%) sepia(95%) saturate(1154%) hue-rotate(203deg) brightness(94%) contrast(89%);
         }
 
         &:last-of-type{
@@ -60,7 +60,176 @@
     &-inner{
       display: grid;
       grid-template-columns: repeat(3,1fr);
+       height: 90vh;
+      overflow: hidden;
+      padding-top: 1rem;
+    }
+  }
+
+  .contact-list{
+    height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    &-filter{
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+
+      &-select{
+        border-radius: .5rem;
+        padding: .5rem;
+        background-color: transparent;
+        border: 1px solid color(gray);
+      }
+
+      &-view{
+        border: 1px solid color(gray);
+        padding: .5rem;
+        border-radius: .5rem;
+      }
+    }
+    &-item{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      background-color: transparent;
+      transition: all .3s ease-in-out;
+      cursor: pointer;
+      border-radius: .3rem;
+      margin: 1rem 0;
+      padding: 1rem;
+
+      &:hover{
+        background-color: color(white);
+      }
+
+      &-image{
+        width: 50px;
+        height: 50px;
+        border-radius: .3rem;
+      }
+      &-info{
+        margin: 0 1rem;
+        color: color(gray);
+        p{
+          font-size: .8rem;
+        }
+      }
+
+      &-time{
+        font-size: .7rem;
+      }
+    }
+  }
+
+  .contact-card{
+    padding: 1rem;
+    background-color: color(white);
+    overflow: auto;
+    &-profile{
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+
+      &-header{
+        margin-right: 1rem;
+        p{
+          font-size: .7rem;
+        }
+      }
+
+      &-image{
+        width: 70px;
+        height: 70px;
+        border-radius: .3rem;
+      }
+
+      &-action-icon{
+        width: 50px;
+        height: 50px;
+        border-radius: .3rem;
+      }
+      &-text{
+        margin-bottom: 1rem;
+        p:first-of-type{
+          color: color(gray);
+        }
+      }
+
+    }
+
+  }
+
+  .contact-card-history{
+    overflow: auto;
+    &-title{
+      color: color(gray);
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    &-header,&-item{
+      display: grid;
       grid-template-rows: auto;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    &-item{
+      font-size: .7rem;
+    }
+
+  }
+
+  .call-section{
+    padding: 1rem;
+    text-align: center;
+    overflow: auto;
+
+    &-timer{
+      color: color(green);
+      margin: 1rem 0;
+    }
+    &-title{
+
+    }
+    &-number{
+      font-size: $bigSize;
+      font-weight: bold;
+    }
+
+    &-textarea{
+      width: 100%;
+      height: 250px;
+      padding: 1rem;
+      background-color: color(white);
+      border-radius: 2rem;
+      margin-bottom: 2rem;
+    }
+    &-panel{
+      display: flex;
+      justify-content: space-around;
+      margin: 2rem;
+      img{
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .log-section{
+      text-align: left;
+      h3{
+        font-size: $mediumSize;
+        color: color(gray);
+      }
+
+      &-action{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        label{
+          width: 50%;
+          margin: .5rem 0;
+        }
+      }
     }
   }
 }

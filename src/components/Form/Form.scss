@@ -1,0 +1,23 @@
+@import "../../styles/App";
+
+.form{
+  padding: 2rem;
+  &-input-group{
+    margin: 1rem 0;
+    label{
+      display: block;
+      margin-bottom: 1rem;
+    }
+    input{
+      border-bottom: 1px solid color(primary);
+      width: 100%;
+    }
+  }
+
+  &-button{
+    background-color: color(primary);
+    color: color(white);
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+  }
+}
