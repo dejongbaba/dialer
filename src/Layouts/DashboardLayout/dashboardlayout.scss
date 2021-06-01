@@ -1,8 +1,12 @@
 @import "../../styles/App";
 .dashboard-layout{
 
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  height: 100vh;
+
   .side-menu{
-    width: 250px;
+
     text-align: center;
     padding: 4rem 0;
     background-color: color(primary);
@@ -10,7 +14,7 @@
     &-item{
       margin-bottom: 5rem;
       &-icon{
-        filter: invert(1) brightness(1.5);
+        //filter: invert(1) brightness(1.5);
         display: inline-block;
         width: 40px;
         height: 40px;
@@ -20,7 +24,8 @@
 
 
   .top-nav{
-
+    padding: .5rem 1rem .5rem 3rem;
+    background-color: color(neutral);
     &-title{
       font-size: $bigSize;
       font-weight: 600;
@@ -36,7 +41,7 @@
         margin-right: 2rem;
         img{
           width: 30px;
-          //filter: invert(21%) sepia(95%) saturate(1154%) hue-rotate(203deg) brightness(94%) contrast(89%);
+          filter: invert(21%) sepia(95%) saturate(1154%) hue-rotate(203deg) brightness(94%) contrast(89%);
         }
 
         &:last-of-type{
@@ -56,20 +61,22 @@
   }
 
   .content-section{
-    background-color: color(neutral);
+    background-color: color(white);
     &-inner{
       display: grid;
       grid-template-columns: repeat(3,1fr);
        height: 90vh;
       overflow: hidden;
-      padding-top: 1rem;
+      padding: 1rem 1rem 0 3rem;
+
     }
   }
 
   .contact-list{
     height: 80vh;
     overflow-y: auto;
-    position: relative;
+    position: fixed;
+    width: 100%;
     &-filter{
       padding: 1rem;
       display: flex;
@@ -124,6 +131,8 @@
 
   .contact-card{
     padding: 1rem;
+    border-left: 1px solid color(neutral);
+    border-right: 1px solid color(neutral);
     background-color: color(white);
     overflow: auto;
     &-profile{
@@ -162,19 +171,36 @@
 
   .contact-card-history{
     overflow: auto;
+    margin: -1rem;
     &-title{
       color: color(gray);
+      padding: 1rem;
       font-weight: bold;
       margin-bottom: 1rem;
     }
+
     &-header,&-item{
-      display: grid;
-      grid-template-rows: auto;
-      grid-template-columns: repeat(4,1fr);
+      display: flex;
+      justify-content:space-between;
     }
 
     &-item{
       font-size: .7rem;
+      margin: 1rem 0;
+      padding: 1rem;
+      box-shadow: 0 0 10px rgba(0,0,150,0.04),0 0 40px rgba(0,0,80,0.08);
+      flex: 1;
+    }
+
+    &-header{
+      color: color(gray);
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+
+      div{
+        flex: 1;
+        text-align: center;
+      }
     }
 
   }
@@ -198,11 +224,17 @@
 
     &-textarea{
       width: 100%;
-      height: 250px;
-      padding: 1rem;
+      min-height: 250px;
+      overflow: hidden;
       background-color: color(white);
       border-radius: 2rem;
       margin-bottom: 2rem;
+      .rdw-editor-toolbar{
+        border: none;
+      }
+      .rdw-editor-main{
+        padding:1rem;
+      }
     }
     &-panel{
       display: flex;

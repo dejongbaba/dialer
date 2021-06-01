@@ -38,7 +38,7 @@ const SideMenu = () => {
 
 const ContentSection = ({ children }: any) => {
   return (
-    <div className="content-section flex-grow p-4">
+    <div className="content-section">
       <nav className="top-nav flex justify-between">
         <h3 className="top-nav-title">Contacts</h3>
         <ul className="top-nav-menu">
@@ -67,7 +67,7 @@ const ContentSection = ({ children }: any) => {
 
 function DashboardLayout({ children }: any) {
   return (
-    <div className="dashboard-layout flex min-h-screen ">
+    <div className="dashboard-layout ">
       <SideMenu />
       <ContentSection>{children}</ContentSection>
     </div>

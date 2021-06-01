@@ -20,6 +20,7 @@ function Dashboard() {
         </ContactList>
         <ContactCard image={placeHolder} icon={phoneIcon}>
           <ContactHistory />
+          <FloatingButton title={"Load More"} />
         </ContactCard>
         <CallSection />
       </DashboardLayout>
